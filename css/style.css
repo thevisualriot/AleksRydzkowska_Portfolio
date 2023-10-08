@@ -218,10 +218,12 @@ h4 {
 /* styling for icons container */
 .contact ul {
     padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 
     li {
         display: inline;
-        align-items: center;
     }
 }
 
@@ -287,6 +289,11 @@ svg {
 
     /* change grid layout */
 
+    .work {
+        text-align: center;
+        padding: 70px 0 0;
+    }
+
     #workGrid {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -297,8 +304,9 @@ svg {
             "ksservice";
     }
 
-    #featuredWork {
-        height: auto;
+    #featuredWork, #pramed, #horiseon, #ksservice, #dadimas {
+        height: 40vh;
+        width: 100vw;
     }
     
     .details {

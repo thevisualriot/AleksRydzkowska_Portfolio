@@ -13,7 +13,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
     color: var(--textDark);
     line-height: 1.6;
 }
@@ -27,6 +26,7 @@ a {
 
     &:hover {
         color: var(--accent);
+        text-decoration: none;
     }
 }
 
@@ -36,7 +36,7 @@ a {
 /* navigation container */
 nav {
     display: flex;
-    padding: 1% 7% 0 5%;
+    padding: 30px 50px;
     justify-content: flex-end;
 }
 
@@ -124,6 +124,7 @@ header p {
 
 /* shared styles for the images */
 #featuredWork, #pramed, #horiseon, #ksservice, #dadimas {
+    height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -132,7 +133,6 @@ header p {
 /* backgrounds for individual items in work section */
 #featuredWork {
     grid-area: featuredWork;
-    height: 600px;
     background-image: url("../assets/trollsvselves.jpg");
 }
 
@@ -185,7 +185,6 @@ header p {
         &:hover {
             height: 100%;
             transition: height 0.3s;
-            color: var(--darkestColor);
         }
 
         a {
@@ -195,8 +194,12 @@ header p {
             width: 100%;
             height: 400px;
             text-decoration: none;
-            color: inherit;
+            color: var(--darkestColor);
         }
+}
+
+.details:hover a {
+    color: #131313;
 }
 
 /* show description when hovered */
@@ -257,13 +260,22 @@ svg {
 /* styles for screens up to 1000px in width */
 @media only screen and (max-width: 1000px) {
 
+    body {
+        padding: 0;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
 /* change position of the nav */
     nav {
         display: flex;
-        justify-content: space-around !important;
-        margin: 0;
-        padding: 0;
+        justify-content: space-around;
+        padding: 5vw 0 0 0;
     }
+
 
 /* add overlay and change position of the text and title in header */
     header {
@@ -289,13 +301,17 @@ svg {
         width: 70vw;
     }
 
+    /* change margins in the about and contact sections */
+
+    .about, .contact {
+        padding: 70px 5vw 70px 5vw;
+    }
+
     /* change grid layout */
 
     .work {
-        text-align: center;
-        padding: 30px 0 50px 0;
+        padding: 30px 0 10px 0;
     }
-
 
     #workGrid {
         grid-template-columns: 1fr;
@@ -311,16 +327,39 @@ svg {
         height: 40vh;
         width: auto;
     }
-    
+
+
+    /* Adapt overlay and hide long description for mobile */
+
     .details {
-        height: auto;
+        height: 26%;
+        padding-bottom: 10px;
+
+        &:hover {
+            height: 26%;
+        }
     }
 
-    .details p::after {
-        white-space: pre;
-        content: "\a\a Tap again to visit";
-        font-weight: 500;
-        font-style: italic;
+    .details h3 {
+        font-size: 1.4em;
     }
-    
-}
+
+    .details h4 {
+        font-size: 0.8em;
+    }
+
+    .details h3:after {
+        /* white-space:pre;  */
+        content: '   \f08e';
+        font-family: FontAwesome;
+        font-size: 0.7em;
+        font-weight:normal;
+    }
+
+    .details:hover .description {
+        display: none;
+        }
+    }
+
+
+ 

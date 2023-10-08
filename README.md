@@ -1,8 +1,9 @@
 # Personal Portfolio 
 Welcome to my personal portfolio repository! This represents my first attempt to develop a web-based portfolio, in which I showcase my skills and works related to web development and UI/UX design.
 
+
 ## 🚀 Live Version
-Experience the live version of my portfolio: [Click here](https://)
+Experience the live version of my portfolio: [Click here](https://thevisualriot.github.io/First-personal-portfolio/)
 
 ## 📝 Description
 This portfolio is a single-page website, hand-coded using HTML and CSS. The design layout was crafted in Adobe XD. Here are some of the standout features:<br><br>

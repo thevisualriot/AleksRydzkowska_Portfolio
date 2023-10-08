@@ -17,6 +17,11 @@ body {
     line-height: 1.6;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 
 /* styling for anchor tags, including hover effects */
 a {
@@ -262,11 +267,6 @@ svg {
 
     body {
         padding: 0;
-    }
-
-    ul {
-        padding: 0;
-        margin: 0;
     }
 
 /* change position of the nav */

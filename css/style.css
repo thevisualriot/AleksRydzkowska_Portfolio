@@ -185,6 +185,7 @@ header p {
         &:hover {
             height: 100%;
             transition: height 0.3s;
+            color: var(--darkestColor);
         }
 
         a {
@@ -313,6 +314,13 @@ svg {
     
     .details {
         height: auto;
+    }
+
+    .details p::after {
+        white-space: pre;
+        content: "\a\a Tap again to visit";
+        font-weight: 500;
+        font-style: italic;
     }
     
 }
